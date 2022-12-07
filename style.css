@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@200;300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@200;300&family=Merriweather:wght@700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font-use),sans-serif;
+}
+body{
+    background-color: black;
+    color: var(--primary-white);
+
+}
+:root{
+    --header-color:#C62828;
+    --cards-color:rgba(255,255,255,.7);
+    --primary-white:#ffffff;
+    --font-use:'kanit';
+    --black-color:black;
+}
+
+/* utilitys */
+.container{
+    max-width: 1100px;
+    margin-inline: auto;
+
+}
+.flex {
+    display: flex;
+    align-items: center;
+}
+.hide{
+    display: none;
+}
+
+h1{
+    color: var(--primary-white);
+    text-align: center;
+
+}
+h3{
+    color: var(--primary-white);
+    text-align: center;
+}
+
+/* .main-header */
+
+.main-header{
+    background: var(--header-color);
+    color: var(--primary-white);
+    padding: 20px;
+    padding-left: 30px;
+    justify-content: space-between;
+
+}
+
+.box{
+    gap:20px;
+}
+
+.ufc-logo img {
+    height: 2.5rem;
+}
+
+.font{
+    opacity:60%;
+
+}
+
+.fighting-Section{
+    padding-top: 3px;
+    justify-items: end;
+}
+
+.sections {
+    flex-direction: row;
+    gap:30px;
+
+}
+
+a{
+    text-decoration: none;
+    color: var(--primary-white);
+    padding: 5px;
+    
+}
+a:hover{
+    cursor: pointer;
+
+}
+
+/* sub-header  */
+.sub-header{
+    justify-content: center;
+    max-height: 75vh;
+    height: 75vh;
+    background-image: url(https://wallpaperaccess.com/full/4487598.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+
+}
+
+.ufc-fighter-image {
+    flex-direction: column;
+    font-family: 'Merriweather' !important;
+    font-size: 2rem;
+    
+}
+.ufc-fighter-image img{
+    padding-top: 11rem;
+    width: 8rem;
+}
+
+
+
+/* main-card section  */
+.main-card{
+    margin-top: 5px;
+
+}
+
+.events h2{
+    color: var(--primary-white);
+    font-size: 2.5rem;
+
+}
+.fighters-detail{
+    background-color: var(--primary-white);
+    justify-content: space-between;
+    color: black !important;
+    max-height: 12rem;
+    overflow: hidden;
+    padding: 20px;
+}
+
+/* left side character detail  */
+.left-img img,.right-img img{
+    padding-top: 10.5rem;
+    width:185px ;
+    height: 513px;
+}
+.left-fighter-detail{
+    gap: 30px;
+
+}
+
+
+.left-fighter-detail h2 , .right-fighter-detail h2,.vs {
+    font-weight: 900;
+    font-size:30px;
+}
+/* fight title and vs  */
+.title-and-vs{
+    flex-direction: column;
+    gap: 40px;
+    padding-bottom: 70px;
+    overflow: visible;
+}
+.ufc-fighter-title {
+    opacity: 60%;
+    font-size: 15px;
+}
+/* right side character detail  */
+.right-fighter-detail{
+    gap: 30px;
+    flex-direction: row-reverse;
+}
+
+/* flag and country detail  */
+
+.flag-detail{
+    background-color: var(--primary-white);
+    color: var(--black-color);
+    padding: 0 40px 0;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+.left-flag img,.right-flag img{
+    max-width: 40px;
+}
