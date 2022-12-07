@@ -1,17 +1,19 @@
 'use strict'
 
-const passUfc=document.querySelector('.html-through-js')
+const passUfc=document.querySelector('.html-through-js');
+const scrollToMainCard=document.querySelector('.MAIN');
+const main_card= document.querySelector('.main-card');
 const newArr=[]
 
 
 async function getResult(){
-  const response = await  fetch('http://localhost:9000/')
+  const response = await  fetch('https://adorable-threads-fish.cyclic.app/')
   const res      = await  response.json()
     newArr.push(res)
 
 
     res.flat().forEach(data=>{
-        const rightFighterNames=data.RightFighterName.split('\n')[0]+' '+data.RightFighterName.split('\n')[1].trimStart()
+        const rightFighterNames=data.RightFighterName.split('\n')[0]+' '+data.RightFighterName.split('\n')[1].trim()
         let leftFighterNames;
 
         console.log(data)
@@ -20,7 +22,7 @@ async function getResult(){
             
         }
         if(data.LeftFighterName.split('\n')[1] !==undefined){
-            leftFighterNames=  data.LeftFighterName.split('\n')[0]+' '+data.LeftFighterName.split('\n')[1].trimStart()
+            leftFighterNames=  data.LeftFighterName.split('\n')[0]+' '+data.LeftFighterName.split('\n')[1].trim()
         }
 
         
@@ -71,3 +73,7 @@ async function getResult(){
 
 
 
+scrollToMainCard.addEventListener('click',function(e){
+    e.preventDefault()
+    main_card.scrollIntoView({behavior:'smooth'})
+})
