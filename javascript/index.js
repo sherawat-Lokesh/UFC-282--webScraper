@@ -7,7 +7,7 @@ const newArr=[]
 
 
 async function getResult(){
-  const response = await  fetch('https://adorable-threads-fish.cyclic.app/')
+  const response = await  fetch('https://adorable-threads-fish.cyclic.app/',{})
   const res      = await  response.json()
     newArr.push(res)
 
