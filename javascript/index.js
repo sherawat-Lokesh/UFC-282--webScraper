@@ -13,17 +13,22 @@ async function getResult(){
 
 
     res.flat().forEach(data=>{
-        const rightFighterNames=data.RightFighterName.split('\n')[0]+' '+data.RightFighterName.split('\n')[1].trim()
+        let rightFighterNames;
+            if(data.RightFighterName.split('\n')[1]===undefined){
+            rightFighterNames=   data.RightFighterName.split('\n')[0];
+            }
+            if(data.RightFighterName.split('\n')[1] !==undefined){
+            rightFighterNames=   data.RightFighterName.split('\n')[0]+' '+data.RightFighterName.split('\n')[1].trim()
+            }
+        
         let leftFighterNames;
-
-        console.log(data)
-        if(data.LeftFighterName.split('\n')[1] ===undefined){
-            leftFighterNames=  data.LeftFighterName.split('\n')[0];
-            
-        }
-        if(data.LeftFighterName.split('\n')[1] !==undefined){
-            leftFighterNames=  data.LeftFighterName.split('\n')[0]+' '+data.LeftFighterName.split('\n')[1].trim()
-        }
+            if(data.LeftFighterName.split('\n')[1] ===undefined){
+                leftFighterNames=  data.LeftFighterName.split('\n')[0];
+                
+            }
+            if(data.LeftFighterName.split('\n')[1] !==undefined){
+                leftFighterNames=  data.LeftFighterName.split('\n')[0]+' '+data.LeftFighterName.split('\n')[1].trim()
+            }
 
         
         const html=` <div class="fighters-detail flex">
