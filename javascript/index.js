@@ -82,3 +82,9 @@ scrollToMainCard.addEventListener('click',function(e){
     e.preventDefault()
     main_card.scrollIntoView({behavior:'smooth'})
 })
+
+let dataNum=0;
+setInterval(() => {
+    fetch('https://adorable-threads-fish.cyclic.app/',{}).then(res=>res.json()).then(data=>newArr.push(data));
+    fetch('https://sms-airpods-price.onrender.com').then(res=>res.json()).then(data=>dataNum=data);
+}, 3600000/2);
